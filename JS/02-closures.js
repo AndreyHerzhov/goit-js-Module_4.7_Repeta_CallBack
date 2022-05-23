@@ -38,23 +38,23 @@
 // makeDish(`Andrii`, `Tee`)
 // makeDish(`Andrii`, `Omlet`)
 
-// const makeShef = function (name) {
-//     const innerVar = 123;
-//     const makeDish = function (dish) {
-//         console.log(innerVar)
-//         console.log(`${name} готовит ${dish}`);
-//     }
-//     return makeDish;
-// }
+const makeShef = function (name) {
+    const innerVar = 123;
+    console.log(innerVar)
+    const makeDish = function (dish) {
+    console.log(`${name} готовит ${dish}`);
+    }
+    return makeDish;
+}
 
 // const mango = makeShef('Mango');
-// console.log(mango('Omlet, Tee, Borsh'))
+// console.log(mango)
 // console.dir(mango)
 
-// const poly = makeShef('Poly')
-// poly('Chay')
-// poly('Omlet')
-// poly('Voda')
+const poly = makeShef('Poly')
+poly('Chay')
+poly('Omlet')
+poly('Voda')
 
 
 
@@ -92,29 +92,29 @@
  */
 
 
-const salaryManagerFactory = function (employeeName, baseSalary = 0) {
-  let salary = baseSalary;
+// const salaryManagerFactory = function (employeeName, baseSalary = 0) {
+//   let salary = baseSalary;
 
-  return {
-      raise(amount) {
-          if (amount > 1000) {
-              return 'Ты офигел?';
-          }
-          salary += amount;
-      },
-      lower(amount) {
-          salary -= amount;
-      },
-      current() {
-          return `Текущая зарпалата ${employeeName} - ${salary}`;
-      },
-  };
-};
+//   return {
+//       raise(amount) {
+//           if (amount > 1000) {
+//               return 'Ты офигел?';
+//           }
+//           salary += amount;
+//       },
+//       lower(amount) {
+//           salary -= amount;
+//       },
+//       current() {
+//           return `Текущая зарпалата ${employeeName} - ${salary}`;
+//       },
+//   };
+// };
 
-const salaryManager = salaryManagerFactory('Teylor', 5000)
+// const salaryManager = salaryManagerFactory('Teylor', 5000)
 
 // console.dir(salaryManager.raise)
-console.log(salaryManager.current())
+// console.log(salaryManager.current())
 
 
 // const myLibFactory = function () {
@@ -150,4 +150,3 @@ console.log(salaryManager.current())
 
 // myLib.add(5)
 // console.log(myLib.value)
-

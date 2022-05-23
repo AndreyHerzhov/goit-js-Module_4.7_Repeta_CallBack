@@ -83,4 +83,19 @@
 // const r3 = filter(fruits, getFruitsWithQuantity);
 // console.log(r3);
 
- 
+
+/*
+ *        ЗАМЫКАНИЕ
+ */
+
+const makeShef = function (name) {
+    const makeDish = function (dish) {
+    console.log(`${name} готовит ${dish}`);
+    }
+    return makeDish;
+}
+
+const poly = makeShef('Poly')
+poly('Chay')
+poly('Omlet')
+poly('Voda')
